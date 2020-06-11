@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 0615a953426c8724991a08088f33ba65
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4370434339658137984
+    second: "Loup couch\xE9_0"
+  - first:
+      213: -4507616362886213355
+    second: "Loup couch\xE9_1"
+  - first:
+      213: -8894836716304133163
+    second: "Loup couch\xE9_2"
+  - first:
+      213: -4855539921281253453
+    second: "Loup couch\xE9_3"
+  - first:
+      213: -8649722441129903882
+    second: "Loup couch\xE9_4"
+  - first:
+      213: -6650704300446898312
+    second: "Loup couch\xE9_5"
+  - first:
+      213: -3717248012131944664
+    second: "Loup couch\xE9_6"
+  - first:
+      213: 1904604480713381412
+    second: "Loup couch\xE9_7"
+  - first:
+      213: 404004169721070360
+    second: "Loup couch\xE9_8"
+  - first:
+      213: -4826921185714092465
+    second: "Loup couch\xE9_9"
+  - first:
+      213: -5546985701462939768
+    second: "Loup couch\xE9_10"
+  - first:
+      213: -3126868210425556053
+    second: "Loup couch\xE9_11"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Loup couch\xE9_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f0e44d90fc77845892994db9b1fe1b
+      internalID: 4370434339658137984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_1"
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 736
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5fcf6e4ac93d9459989359a936e106
+      internalID: -4507616362886213355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_2"
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 736
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de53baeceb8e57c42be17644e02cadf6
+      internalID: -8894836716304133163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_3"
+      rect:
+        serializedVersion: 2
+        x: 4416
+        y: 736
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afad2434539c78344827f14f9bccc0fa
+      internalID: -4855539921281253453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_4"
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 736
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cac7592bde4da54dbc4324a6a744039
+      internalID: -8649722441129903882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_5"
+      rect:
+        serializedVersion: 2
+        x: 7360
+        y: 736
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6cec7272d2d444fb5a9beae7291c4e
+      internalID: -6650704300446898312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_6"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ecdb46bb9222e4683425f961384422
+      internalID: -3717248012131944664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_7"
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271f443b2805cfe488a5c96c9ffb998e
+      internalID: 1904604480713381412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_8"
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e43ecd3818a6c498430f3a6bd0d93f
+      internalID: 404004169721070360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_9"
+      rect:
+        serializedVersion: 2
+        x: 4416
+        y: 0
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0d5c6587dec6d43acc4d6f7bbe6481
+      internalID: -4826921185714092465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_10"
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 0
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4e5181ac3436740b6754f56857b2a7
+      internalID: -5546985701462939768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Loup couch\xE9_11"
+      rect:
+        serializedVersion: 2
+        x: 7360
+        y: 0
+        width: 1472
+        height: 736
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560616813d4829d468524a118ccbcf8e
+      internalID: -3126868210425556053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

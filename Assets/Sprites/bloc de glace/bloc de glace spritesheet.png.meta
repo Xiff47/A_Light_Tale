@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 659c21b34cb29c6438712a308c43a123
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -434165529416690190
+    second: bloc de glace spritesheet_0
+  - first:
+      213: -7629106620190157248
+    second: bloc de glace spritesheet_1
+  - first:
+      213: 2344788588668571999
+    second: bloc de glace spritesheet_2
+  - first:
+      213: -4973372876865555863
+    second: bloc de glace spritesheet_3
+  - first:
+      213: -6247701707277674416
+    second: bloc de glace spritesheet_4
+  - first:
+      213: -5304955104265156977
+    second: bloc de glace spritesheet_5
+  - first:
+      213: 6771262529154727627
+    second: bloc de glace spritesheet_6
+  - first:
+      213: -4214333956378106744
+    second: bloc de glace spritesheet_7
+  - first:
+      213: -9144805847340206789
+    second: bloc de glace spritesheet_8
+  - first:
+      213: -6085274633038760253
+    second: bloc de glace spritesheet_9
+  - first:
+      213: 5193249578440530196
+    second: bloc de glace spritesheet_10
+  - first:
+      213: -4723311258539066840
+    second: bloc de glace spritesheet_11
+  - first:
+      213: 550434999421326984
+    second: bloc de glace spritesheet_12
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad6b17b9798f7a46b0107421cf364d1
+      internalID: -434165529416690190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ef8bd1a92f5cd4a99e3d0b196b3101
+      internalID: -7629106620190157248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97667fe66bd1ff48877c57a0472a596
+      internalID: 2344788588668571999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3261
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad52f5614f104d45a3ced535cbd5dc7
+      internalID: -4973372876865555863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4348
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2630122f1eef7745abc8fe6fd2dd3c2
+      internalID: -6247701707277674416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5435
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a239dbff4fa22ef4b8cc3c7060a25d48
+      internalID: -5304955104265156977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 6522
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480953510d372ee47bcb682c88c6a06f
+      internalID: 6771262529154727627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 7609
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c12721f18efdd44e8fbdce2898dd53c
+      internalID: -4214333956378106744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 8696
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974bb6ba9f0848a4abc1143a33ef36df
+      internalID: -9144805847340206789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 9783
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024716fd66b4d5045b66828f2a2177b5
+      internalID: -6085274633038760253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 10870
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7184296e5e1e7d444a331cab8df5d8a6
+      internalID: 5193249578440530196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 11957
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594038dd7e8a27b459e9ff012900c042
+      internalID: -4723311258539066840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloc de glace spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 13044
+        y: 0
+        width: 1087
+        height: 709
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b8dc1b2b383554c868e45101676b1a
+      internalID: 550434999421326984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
