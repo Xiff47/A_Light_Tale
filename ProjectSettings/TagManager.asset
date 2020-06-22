@@ -4,9 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Kid
   - Item
   - Tree
+=======
+  - Tree
+  - Item
+  - Kid
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -16,11 +22,19 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< Updated upstream
   - Light
   - LightNoCollision
   - LimitMap
   - Wolf
   - Kid
+=======
+  - 
+  - 
+  - 
+  - 
+  - 
+>>>>>>> Stashed changes
   - 
   - 
   - 
