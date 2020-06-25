@@ -125,8 +125,15 @@ public class lightScript : MonoBehaviour
 					TimerLoseLight = 1f;
 					if(lightToLooseToKid >= 0){ lightToLooseToKid = -lightToLooseToKid;}
 					SetLight(lightToLooseToKid);
+<<<<<<< Updated upstream
+					// Animator kidAnimator = kid.GetComponent<kidScript>().GetComponent<Animator>(); // Animator de l'enfant
+					if(kidDistance <= 3f){
+						kid.GetComponent<kidScript>().SetLife(lifeToGiveToKid);						
+						// kidAnimator.SetBool("SeRechauffe", true);
+=======
 					if(kidDistance <= 3f){
 						kid.GetComponent<kidScript>().SetLife(lifeToGiveToKid);
+>>>>>>> Stashed changes
 					}
 					if(kid.GetComponent<kidScript>().isDed){
 						kid.GetComponent<kidScript>().isDed = false;

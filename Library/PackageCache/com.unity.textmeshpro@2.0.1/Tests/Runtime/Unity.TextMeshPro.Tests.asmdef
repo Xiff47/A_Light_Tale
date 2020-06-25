@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "name": "Unity.TextMeshPro.Tests",
     "references": [
@@ -9,4 +10,17 @@
     ],
     "includePlatforms": [],
     "excludePlatforms": []
+=======
+{
+    "name": "Unity.TextMeshPro.Tests",
+    "references": [
+        "Unity.TextMeshPro",
+		"Unity.ugui"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+>>>>>>> Stashed changes
 }

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "name": "Unity.TextMeshPro.Editor",
     "references": [
@@ -10,4 +11,18 @@
         "Editor"
     ],
     "excludePlatforms": []
+=======
+{
+    "name": "Unity.TextMeshPro.Editor",
+    "references": [
+        "Unity.TextMeshPro",
+		"Unity.ugui",
+		"Unity.ugui.Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+>>>>>>> Stashed changes
 }

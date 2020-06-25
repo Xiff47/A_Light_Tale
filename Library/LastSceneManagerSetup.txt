@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/testLudovic.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/Scenes/testYvan.unity
+=======
+- path: Assets/Scenes/Level1.unity
+>>>>>>> Stashed changes
+>>>>>>> Test
   isLoaded: 1
   isActive: 1
   isSubScene: 0

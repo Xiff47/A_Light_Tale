@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "name": "Unity.Rider.Editor",
     "references": [],
@@ -7,3 +8,14 @@
     ],
     "excludePlatforms": []
 }
+=======
+{
+    "name": "Unity.Rider.Editor",
+    "references": [],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
+>>>>>>> Stashed changes
