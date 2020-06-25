@@ -11,16 +11,23 @@ public class boussoleScript : MonoBehaviour
     float m_Angle;
 
     //You must assign to these two GameObjects in the Inspector
-    public GameObject light;
-    public GameObject kid;
-	int activationInt = 0;
-
+    GameObject light;
+    GameObject kid;
+	bool isVisible;
+	int visibleState = 0;
+	float t = 0;
+	float timer = 1f;
+	float visibility = 0;
+	bool started = false;
+	
     void Start()
     {
         //Initialise the Vector
         m_MyFirstVector = Vector2.zero;
         m_Angle = 0.0f;
-		transform.GetChild(0).gameObject.SetActive(false);
+		light = transform.parent.gameObject;
+		kid = light.GetComponent<lightScript>().kid;
+		transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255,255,255, 0);
     }
 
     void Update()
@@ -31,16 +38,49 @@ public class boussoleScript : MonoBehaviour
         m_MySecondVector = (light.transform.position-kid.transform.position).normalized;
         //Find the angle for the two Vectors
         m_Angle = Vector2.SignedAngle(m_MyFirstVector, m_MySecondVector);
-		if(true){
+		if(started){
 			UpdateUI();
+			switch(visibleState){
+				case 0 :
+					visibility = (t/timer);
+					t += Time.deltaTime;
+					if(t>=timer){
+						visibleState++;
+						timer = 1;
+						t = 0;
+					}
+				break;
+				case 1 :
+					visibility = (t/timer);
+					transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255,255,255, visibility);
+					if(!isVisible && t>0){
+						t -= Time.deltaTime;
+					}else{
+						t += Time.deltaTime;
+					}
+					if(t>=timer){
+						visibleState++;
+						t=0;
+						timer=0.2f;
+					}
+				break;
+				case 2 :
+					if(!isVisible){
+						visibility = 1-(t/timer);
+						transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255,255,255, visibility);
+						t += Time.deltaTime;
+						if(t>=timer){
+							visibleState=0;
+							started = false;
+							timer = 1;
+							t = 0;
+						}
+					}
+				break;
+			}
 		}else{
-			gameObject.SetActive(false);
+			transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255,255,255, 0);
 		}
-		
-		if (Input.GetKeyUp("n"))
-        {
-            ToggleVisibility();
-        }
     }
 	
 	void UpdateUI(){
@@ -51,8 +91,16 @@ public class boussoleScript : MonoBehaviour
 		);
 	}
 	
-	void ToggleVisibility(){
-		activationInt = (activationInt+1)%3;
-		transform.GetChild(0).gameObject.SetActive(activationInt==2);
+	public void SetVisibility(bool isFarAway){
+		if(isFarAway && visibleState == 0){
+			isVisible = true;
+			started = true;
+		}
+		if(!isFarAway){
+			isVisible = false;
+			if(visibleState == 0){
+				started = false;
+			}
+		}
 	}
 }
