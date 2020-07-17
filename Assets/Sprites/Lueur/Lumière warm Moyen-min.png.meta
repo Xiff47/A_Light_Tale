@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -5173832743739663561
     second: "Lumi\xE8re warm Moyen-min_5"
+  - first:
+      213: 4318862903157345017
+    second: "Lumi\xE8re warm Moyen-min_6"
+  - first:
+      213: 5437833140517210080
+    second: "Lumi\xE8re warm Moyen-min_7"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -120,9 +126,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1000
-        height: 990
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb0297669782c7d499619663ba57917b
+      spriteID: 0a7f609ce1c265840b5d462920ab5ee3
       internalID: 4014434806551130943
       vertices: []
       indices: 
@@ -140,10 +146,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Moyen-min_1"
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 1000
-        height: 990
+        x: 1300
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 204eb85972ba5dd4eb95a45b0c9d45c2
+      spriteID: e50a4eadd5b8a31499cdfb749c886a2c
       internalID: -4875979070589045651
       vertices: []
       indices: 
@@ -161,10 +167,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Moyen-min_2"
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 1000
-        height: 990
+        x: 2600
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed3188fc29897444987af6fb7fc1ce4
+      spriteID: 67b2c2566cce894429d4c4c963a89507
       internalID: 3931193579237756323
       vertices: []
       indices: 
@@ -182,10 +188,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Moyen-min_3"
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 1000
-        height: 990
+        x: 3900
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f17c88d80ebf38548ae9fe5871116cdb
+      spriteID: f9c08b8ee25fefe4c82e7b47aa6105a1
       internalID: 2518639518879553175
       vertices: []
       indices: 
@@ -203,10 +209,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Moyen-min_4"
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 0
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e59148d406667144db5a5483ceb00e08
+      spriteID: 3749913c99f1c64428492eafe77c8e92
       internalID: -7804358676371246534
       vertices: []
       indices: 
@@ -224,10 +230,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Moyen-min_5"
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 1300
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +241,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617f45b8d121b7d4e9512ec5e1e68435
+      spriteID: b31925d66d5d2f24abff4748186cc66b
       internalID: -5173832743739663561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Moyen-min_6"
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678f0344185c2d14dbbf0c6d7f0bdbf9
+      internalID: 4318862903157345017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Moyen-min_7"
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91207b84291b814a94421e6b89dea78
+      internalID: 5437833140517210080
       vertices: []
       indices: 
       edges: []

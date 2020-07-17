@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -8634235127503808683
     second: "Lumi\xE8re warm Forte-min_5"
+  - first:
+      213: 3907238083476270231
+    second: "Lumi\xE8re warm Forte-min_6"
+  - first:
+      213: -502712996749896784
+    second: "Lumi\xE8re warm Forte-min_7"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -120,9 +126,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1000
-        height: 990
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aa0a1f4eada31c4b82d8d53b7cc1738
+      spriteID: 2293e18a7096d2c4791e52383f3de0e5
       internalID: 6185060269098705193
       vertices: []
       indices: 
@@ -140,10 +146,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Forte-min_1"
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 1000
-        height: 990
+        x: 1300
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2862589cc4625f64f880cb14ef2c75f8
+      spriteID: 625b6230ef186f1448fe11fba3f41d36
       internalID: -8284352759382484846
       vertices: []
       indices: 
@@ -161,10 +167,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Forte-min_2"
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 1000
-        height: 990
+        x: 2600
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e258fe38d613f44eb59d68b8c861c42
+      spriteID: 7d53b517c67d5e4458a42124d170e23a
       internalID: 7408603496426935625
       vertices: []
       indices: 
@@ -182,10 +188,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Forte-min_3"
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 1000
-        height: 990
+        x: 3900
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a787d9273b92f07458c2f434247fdb1a
+      spriteID: 00122b6e6381f0a48abb9dcfef382d2d
       internalID: 6014669263210146023
       vertices: []
       indices: 
@@ -203,10 +209,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Forte-min_4"
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 0
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5609f559fd4d23428c38fc5b8b1670b
+      spriteID: 3bde2fef288f4c64fa840eb0bd32912e
       internalID: -3345398987824105945
       vertices: []
       indices: 
@@ -224,10 +230,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Forte-min_5"
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 1300
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +241,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 210b775b5f8cc3f4dab06054f612039e
+      spriteID: e854e511e0d8704439aef5cc5865bd32
       internalID: -8634235127503808683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Forte-min_6"
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e600fb7d95cd7140af23cd6a45c062e
+      internalID: 3907238083476270231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Forte-min_7"
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b808e36e5f0b7cf4e93909ba48fccad9
+      internalID: -502712996749896784
       vertices: []
       indices: 
       edges: []

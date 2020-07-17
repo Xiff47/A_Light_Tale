@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -6281062545336403317
     second: "Lumi\xE8re warm Faible-min_5"
+  - first:
+      213: -4827814947802176632
+    second: "Lumi\xE8re warm Faible-min_6"
+  - first:
+      213: -6790728217186927140
+    second: "Lumi\xE8re warm Faible-min_7"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -120,9 +126,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1000
-        height: 990
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ce688753a2fd854f9a8a17ac505c4dc
+      spriteID: efee4a252caa37b46a2ec228f5cedb65
       internalID: 4701757540264977758
       vertices: []
       indices: 
@@ -140,10 +146,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Faible-min_1"
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 1000
-        height: 990
+        x: 1300
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 539bf7607fc1cbd468dd14d005eeba9a
+      spriteID: d193846a73868b843822f1575369a7dd
       internalID: -8303218681142331699
       vertices: []
       indices: 
@@ -161,10 +167,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Faible-min_2"
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 1000
-        height: 990
+        x: 2600
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5916f52390695874d93e2991027da606
+      spriteID: bc3c9583b26cd3742a3e0499e539bf0f
       internalID: -3799681460587405503
       vertices: []
       indices: 
@@ -182,10 +188,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Faible-min_3"
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 1000
-        height: 990
+        x: 3900
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6c5e72733e4cf54fb1994ebee479c7e
+      spriteID: 5f30fc0b79a300b47b717d2590dd6cd5
       internalID: -3725057386212048278
       vertices: []
       indices: 
@@ -203,10 +209,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Faible-min_4"
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 0
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56702765004a9d94b99d5c45255b59fa
+      spriteID: 92429d467124a48439d273c01ec483f3
       internalID: -1103429091387529995
       vertices: []
       indices: 
@@ -224,10 +230,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Faible-min_5"
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 1300
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +241,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd9ef60549034c43a3bb561caf52add
+      spriteID: 60de35da7cc99e8419067051c134d689
       internalID: -6281062545336403317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Faible-min_6"
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02e7278559ca7a4d824e4cb017f2880
+      internalID: -4827814947802176632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Faible-min_7"
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d100165ec0ac74bbba78f806113e79
+      internalID: -6790728217186927140
       vertices: []
       indices: 
       edges: []

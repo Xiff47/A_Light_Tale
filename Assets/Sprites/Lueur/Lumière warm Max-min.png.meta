@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -3534132302074246028
     second: "Lumi\xE8re warm Max-min_5"
+  - first:
+      213: 4900227802667770744
+    second: "Lumi\xE8re warm Max-min_6"
+  - first:
+      213: -5104895853428594065
+    second: "Lumi\xE8re warm Max-min_7"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -120,9 +126,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1000
-        height: 990
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac01b641f7ccea648bae9074f2ebd17f
+      spriteID: e6217ea4ad7bb164ab46d8799bfb2294
       internalID: 5631431740042594831
       vertices: []
       indices: 
@@ -140,10 +146,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Max-min_1"
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 1000
-        height: 990
+        x: 1300
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f785ac2dd4d284596259c5ee29eebc
+      spriteID: fee373d954c9f784990cbaca6b00a910
       internalID: -1847983115857058024
       vertices: []
       indices: 
@@ -161,10 +167,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Max-min_2"
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 1000
-        height: 990
+        x: 2600
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc79d1aaae08a564380fa9e13cd3c811
+      spriteID: 8d2c62fbd6823f445bf4ec25810fbcc2
       internalID: -310252802665163688
       vertices: []
       indices: 
@@ -182,10 +188,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Max-min_3"
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 1000
-        height: 990
+        x: 3900
+        y: 1186
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4bada1947a5eff479c7e5402036a334
+      spriteID: cf3d052b320ee0a47bd915bfbc133130
       internalID: -7001771996227628283
       vertices: []
       indices: 
@@ -203,10 +209,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Max-min_4"
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 0
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d0ee860b6c5f744bcd7bb022c12cd7
+      spriteID: 09b46622fc7a1f945941388ecf96dccb
       internalID: -3854745242231425432
       vertices: []
       indices: 
@@ -224,10 +230,10 @@ TextureImporter:
       name: "Lumi\xE8re warm Max-min_5"
       rect:
         serializedVersion: 2
-        x: 5000
+        x: 1300
         y: 0
-        width: 1000
-        height: 990
+        width: 1300
+        height: 1186
       alignment: 9
       pivot: {x: 0.5, y: 0.15}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +241,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28cb6892c9946624b938c4813b1d0b86
+      spriteID: ce521420c7d4f7c49bb5c0f1eb96635b
       internalID: -3534132302074246028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Max-min_6"
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b603f3bab2eab84eb326faa4353f917
+      internalID: 4900227802667770744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Lumi\xE8re warm Max-min_7"
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 1300
+        height: 1186
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c88ae9ed1117154883488107108fb81
+      internalID: -5104895853428594065
       vertices: []
       indices: 
       edges: []
