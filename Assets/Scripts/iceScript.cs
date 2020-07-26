@@ -15,6 +15,7 @@ public class iceScript : MonoBehaviour
 
 	Animator iceAnimator;
 	int state = 0;
+	bool isMelting = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -31,13 +32,14 @@ public class iceScript : MonoBehaviour
         if(isLighthere){
 			if(light.GetComponent<lightScript>().isCharging){
 				meltTimer -= Time.deltaTime;
+				isMelting = true;
+				iceAnimator.SetBool("isMelting", true);
 				if(meltTimer <= 0){
 					
 					meltTimer = meltTimerMax;
 					hp = hp - hpToLoose;
 					state++;
                     
-
                     if (hp > 0){
 						sprite.transform.localScale = new Vector3(hp,hp,0);
 						iceAnimator.SetInteger("state", state);
@@ -46,6 +48,9 @@ public class iceScript : MonoBehaviour
 					}
                     gameObject.GetComponent<SonGlaceScript>().IceMelting(); //Sacha Place son bout de code là
                 }
+			}else{
+				isMelting = false;
+				iceAnimator.SetBool("isMelting", false);
 			}
 		}
     }

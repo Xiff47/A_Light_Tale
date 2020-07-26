@@ -452,6 +452,7 @@ public class kidScript : MonoBehaviour
             gameObject.GetComponent<SonEnfantScript>().PlayHealSound();
         }
         hp += hpPercentage;
+		//kidAnimator.SetBool("SeRechauffe", true);
 		if(hp>100){
 			healthBar.SetSize(1);
 			hp = 100;
