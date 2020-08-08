@@ -45,6 +45,8 @@ public class lightScript : MonoBehaviour
 
 	Animator lightAnimator;
 	Animator gelAnimator;
+	Animator kidAnimator; // Animator de l'enfant
+
 	
 	[SerializeField] float timerNextGivreStep = 3f;
 	float timerNextGivreStepMax;
@@ -56,6 +58,7 @@ public class lightScript : MonoBehaviour
     {
 		lightAnimator = this.GetComponent<Animator>();
 		gelAnimator = GameObject.Find("Givre").GetComponent<Animator>();
+		kidAnimator = kid.GetComponent<kidScript>().GetComponent<Animator>();
 
 		spawnPosition = spawnDebutDeNiveau.transform.position;
 		transform.position = spawnPosition;
@@ -125,10 +128,9 @@ public class lightScript : MonoBehaviour
 					TimerLoseLight = 1f;
 					if(lightToLooseToKid >= 0){ lightToLooseToKid = -lightToLooseToKid;}
 					SetLight(lightToLooseToKid);
-					// Animator kidAnimator = kid.GetComponent<kidScript>().GetComponent<Animator>(); // Animator de l'enfant
 					if(kidDistance <= 3f){
 						kid.GetComponent<kidScript>().SetLife(lifeToGiveToKid);						
-						// kidAnimator.SetBool("SeRechauffe", true);
+						kidAnimator.SetBool("SeRechauffe", true);
 					}
 					if(kid.GetComponent<kidScript>().isDed){
 						kid.GetComponent<kidScript>().isDed = false;
@@ -142,6 +144,7 @@ public class lightScript : MonoBehaviour
 			}
 			clicGauche = false;
 			lightAnimator.SetBool("clicGauche", false);
+			kidAnimator.SetBool("SeRechauffe", false);
 			clicDuration = 0;
 			currentSpeed = NORMALSPEED;
 			isCharging = false;
