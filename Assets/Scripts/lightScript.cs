@@ -14,7 +14,7 @@ public class lightScript : MonoBehaviour
 	[SerializeField] GameObject spawnDebutDeNiveau;
 	public bool isRespawning = false;
 	
-	[SerializeField] GameObject kid;
+	[SerializeField] public GameObject kid;
 	Vector3 kidPosition;
 	float kidDistance;
 	float mouseDistance;
@@ -149,6 +149,8 @@ public class lightScript : MonoBehaviour
 			currentSpeed = NORMALSPEED;
 			isCharging = false;
 		}
+		
+		transform.GetChild(1).GetComponent<boussoleScript>().SetVisibility(kidDistance>KIDDISTANCEMAX);
 		
 		//setGivreTimer(((kidDistance > KIDDISTANCEMAX) || childIsDed) && acceptGivre && !isRespawning);
 		//setGivreTimer(((kidDistance > KIDDISTANCEMAX) || childIsDed) && acceptGivre);

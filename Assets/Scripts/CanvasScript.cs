@@ -23,10 +23,10 @@ public class CanvasScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp("b"))
+        /*if (Input.GetKeyUp("b"))
         {
             ToggleBarVisibility();
-        }
+        }*/
 		
     }
 	
