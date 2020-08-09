@@ -10,7 +10,7 @@ public class iceScript : MonoBehaviour
 	
 	[SerializeField] public float meltTimer = 0.2f;
 	[SerializeField] float meltTimerMax;
-	[SerializeField] float hpToLoose = 0.05f;
+	[SerializeField] float hpToLoose = 0.125f; // Change en fonction du nombre de frame du bloc de glace
 	float hp = 1f;
 
 	Animator iceAnimator;
@@ -39,6 +39,7 @@ public class iceScript : MonoBehaviour
 					meltTimer = meltTimerMax;
 					hp = hp - hpToLoose;
 					state++;
+					print("State = " + state + " // hp = " + hp + " // hpToLoose = " + hpToLoose);
                     
                     if (hp > 0){
 						sprite.transform.localScale = new Vector3(hp,hp,0);

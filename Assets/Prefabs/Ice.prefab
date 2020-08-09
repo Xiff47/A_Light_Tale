@@ -106,7 +106,7 @@ MonoBehaviour:
   sprite: {fileID: 1148187406764193443}
   meltTimer: 0.2
   meltTimerMax: 0
-  hpToLoose: 0.08
+  hpToLoose: 0.125
 --- !u!212 &4625276329453946039
 SpriteRenderer:
   m_ObjectHideFlags: 0
