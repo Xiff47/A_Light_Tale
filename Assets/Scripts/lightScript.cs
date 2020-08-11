@@ -92,9 +92,7 @@ public class lightScript : MonoBehaviour
 		//distance entre light et kid
 		kidPosition = kid.transform.position;
 		kidDistance = Mathf.Sqrt(Mathf.Pow((kidPosition.x - transform.position.x),2)+Mathf.Pow((kidPosition.y - transform.position.y),2));
-		if(kidDistance <= KIDDISTANCEMAX){
-			timerNextGivreStep = 0;
-		}
+		
 		if(!acceptGivre && kid.GetComponent<kidScript>().isFollowing){
 			acceptGivre = true;
 		}
@@ -252,7 +250,7 @@ public class lightScript : MonoBehaviour
 		if(startingGivre){
 			timerNextGivreStep -= Time.deltaTime;
 			if(timerNextGivreStep <= 0){
-				timerNextGivreStep = timerNextGivreStepMax + actualGivreStep*2 ;
+				timerNextGivreStep = timerNextGivreStepMax + actualGivreStep * 1.3f ;
 				actualGivreStep++;
 				print("Givre state : "+actualGivreStep);
 				if(actualGivreStep > givreStepMax){
@@ -266,6 +264,9 @@ public class lightScript : MonoBehaviour
 			}
 		}else{
 			if(actualGivreStep != 0){
+				if(timerNextGivreStep > 0.2f){
+					timerNextGivreStep = 0f;
+				}
 				//restore vision
 				timerNextGivreStep -= Time.deltaTime;
 				if(timerNextGivreStep <= 0){

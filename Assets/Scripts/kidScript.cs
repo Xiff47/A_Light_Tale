@@ -15,6 +15,9 @@ public class kidScript : MonoBehaviour
 	float lightDistance;
 	Vector2 lightDirection;
 	
+	bool followSpecialTarget = false;
+	Vector2 specialTarget;
+	
 	[SerializeField] public bool canStep = false;
 	[SerializeField] GameObject footStep;
 	Vector2 offsetFootstepSetup = new Vector2(0.3f,0.1f);
@@ -52,7 +55,7 @@ public class kidScript : MonoBehaviour
 	float speedMultiplifier;
 	float currentSpeed;
 	
-	bool isLost;
+	public bool isLost;
 	int fallTest;
 	
 	[SerializeField] private UIBar healthBar;
@@ -117,7 +120,11 @@ public class kidScript : MonoBehaviour
 		
 		
 		//calcul de la distance et de la direction entre enfant et lumière
-        lightPosition = light.transform.position;
+		if(!followSpecialTarget){
+			lightPosition = light.transform.position;
+		}else{
+			lightPosition = specialTarget;
+		}
 		lightDistance = Mathf.Sqrt(Mathf.Pow((lightPosition.x - transform.position.x),2)+Mathf.Pow((lightPosition.y - transform.position.y),2));
 		lightDirection = (lightPosition - transform.position).normalized;
 		
@@ -443,7 +450,7 @@ public class kidScript : MonoBehaviour
 	
 	// EN POURCENTAGE!!!!
 	public void SetLife(float hpPercentage){
-		if(!hasStartedplaying){
+		if(!hasStartedplaying || followSpecialTarget){
 			return;
 		}
 		if(isDed && hpPercentage > 0){
@@ -541,5 +548,13 @@ public class kidScript : MonoBehaviour
 			coveringTrees.Add(tree);
 			isCoveredByTree = true;
 		}
+	}
+	
+	public void SpecialFollow(Vector2 target){
+		followSpecialTarget = true;
+	}
+	
+	public void StopSpecialFollow(){
+		followSpecialTarget = false;
 	}
 }
