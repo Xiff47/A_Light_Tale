@@ -389,6 +389,11 @@ public class kidScript : MonoBehaviour
             }
 			isFalling = false;
 			SetLife(fallBackDamage);
+		}else if(fallReason == "death"){
+			print("Je tombes car j'ai froid !");
+			kidAnimator.SetInteger("kidFalling", 1); // tombe en avant
+			kidAnimator.SetFloat("falling", 1);
+            gameObject.GetComponent<SonEnfantScript>().PlayFallDownSound();
 		}else{
 			print("Je tombes car je vais trop vite !");
 			kidAnimator.SetInteger("kidFalling", 1); // tombe en avant
@@ -438,7 +443,6 @@ public class kidScript : MonoBehaviour
 	
 	// EN POURCENTAGE!!!!
 	public void SetLife(float hpPercentage){
-       
 		if(!hasStartedplaying){
 			return;
 		}
@@ -506,11 +510,13 @@ public class kidScript : MonoBehaviour
 	}
 	
 	public void Die(){
-		CheckItem();
-		FallDown();
-		isDed = true;
-		kidAnimator.SetTrigger("sleep");
-		light.GetComponent<lightScript>().SetChildStance(isDed);
+		if(!isDed){
+			CheckItem();
+			FallDown("death");
+			isDed = true;
+			//kidAnimator.SetTrigger("sleep");
+			light.GetComponent<lightScript>().SetChildStance(isDed);
+		}
 	}
 
 	public void SetCover(GameObject tree, bool cover)

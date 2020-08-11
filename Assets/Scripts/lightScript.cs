@@ -92,6 +92,9 @@ public class lightScript : MonoBehaviour
 		//distance entre light et kid
 		kidPosition = kid.transform.position;
 		kidDistance = Mathf.Sqrt(Mathf.Pow((kidPosition.x - transform.position.x),2)+Mathf.Pow((kidPosition.y - transform.position.y),2));
+		if(kidDistance <= KIDDISTANCEMAX){
+			timerNextGivreStep = 0;
+		}
 		if(!acceptGivre && kid.GetComponent<kidScript>().isFollowing){
 			acceptGivre = true;
 		}
@@ -151,8 +154,7 @@ public class lightScript : MonoBehaviour
 		}
 		
 		transform.GetChild(1).GetComponent<boussoleScript>().SetVisibility(kidDistance>KIDDISTANCEMAX);
-		
-		//setGivreTimer(((kidDistance > KIDDISTANCEMAX) || childIsDed) && acceptGivre && !isRespawning);
+		setGivreTimer(((kidDistance > KIDDISTANCEMAX) || childIsDed) && acceptGivre && !isRespawning);
 		//setGivreTimer(((kidDistance > KIDDISTANCEMAX) || childIsDed) && acceptGivre);
 		
 		/*print("acceptGivre :"+acceptGivre);
@@ -250,7 +252,7 @@ public class lightScript : MonoBehaviour
 		if(startingGivre){
 			timerNextGivreStep -= Time.deltaTime;
 			if(timerNextGivreStep <= 0){
-				timerNextGivreStep = timerNextGivreStepMax;
+				timerNextGivreStep = timerNextGivreStepMax + actualGivreStep*2 ;
 				actualGivreStep++;
 				print("Givre state : "+actualGivreStep);
 				if(actualGivreStep > givreStepMax){
@@ -259,6 +261,7 @@ public class lightScript : MonoBehaviour
 						print("ERROR DETECTED");
 						actualGivreStep = 0;
 					}
+					timerNextGivreStep = 0;
 				}
 			}
 		}else{
