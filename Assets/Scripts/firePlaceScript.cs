@@ -141,7 +141,7 @@ public class firePlaceScript : MonoBehaviour
 		}
 	}
 	
-	void LightUp(){
+	public void LightUp(){
 		isLit = true;
 		animator.SetInteger ("state", 2);
 	}

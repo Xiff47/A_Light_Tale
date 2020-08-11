@@ -15,6 +15,9 @@ public class kidScript : MonoBehaviour
 	float lightDistance;
 	Vector2 lightDirection;
 	
+	bool followSpecialTarget = false;
+	Vector2 specialTarget;
+	
 	[SerializeField] public bool canStep = false;
 	[SerializeField] GameObject footStep;
 	Vector2 offsetFootstepSetup = new Vector2(0.3f,0.1f);
@@ -52,7 +55,7 @@ public class kidScript : MonoBehaviour
 	float speedMultiplifier;
 	float currentSpeed;
 	
-	bool isLost;
+	public bool isLost;
 	int fallTest;
 	
 	[SerializeField] private UIBar healthBar;
@@ -117,7 +120,11 @@ public class kidScript : MonoBehaviour
 		
 		
 		//calcul de la distance et de la direction entre enfant et lumière
-        lightPosition = light.transform.position;
+		if(!followSpecialTarget){
+			lightPosition = light.transform.position;
+		}else{
+			lightPosition = specialTarget;
+		}
 		lightDistance = Mathf.Sqrt(Mathf.Pow((lightPosition.x - transform.position.x),2)+Mathf.Pow((lightPosition.y - transform.position.y),2));
 		lightDirection = (lightPosition - transform.position).normalized;
 		
@@ -389,6 +396,11 @@ public class kidScript : MonoBehaviour
             }
 			isFalling = false;
 			SetLife(fallBackDamage);
+		}else if(fallReason == "death"){
+			print("Je tombes car j'ai froid !");
+			kidAnimator.SetInteger("kidFalling", 1); // tombe en avant
+			kidAnimator.SetFloat("falling", 1);
+            gameObject.GetComponent<SonEnfantScript>().PlayFallDownSound();
 		}else{
 			print("Je tombes car je vais trop vite !");
 			kidAnimator.SetInteger("kidFalling", 1); // tombe en avant
@@ -438,8 +450,7 @@ public class kidScript : MonoBehaviour
 	
 	// EN POURCENTAGE!!!!
 	public void SetLife(float hpPercentage){
-       
-		if(!hasStartedplaying){
+		if(!hasStartedplaying || followSpecialTarget){
 			return;
 		}
 		if(isDed && hpPercentage > 0){
@@ -506,11 +517,13 @@ public class kidScript : MonoBehaviour
 	}
 	
 	public void Die(){
-		CheckItem();
-		FallDown();
-		isDed = true;
-		kidAnimator.SetTrigger("sleep");
-		light.GetComponent<lightScript>().SetChildStance(isDed);
+		if(!isDed){
+			CheckItem();
+			FallDown("death");
+			isDed = true;
+			//kidAnimator.SetTrigger("sleep");
+			light.GetComponent<lightScript>().SetChildStance(isDed);
+		}
 	}
 
 	public void SetCover(GameObject tree, bool cover)
@@ -535,5 +548,13 @@ public class kidScript : MonoBehaviour
 			coveringTrees.Add(tree);
 			isCoveredByTree = true;
 		}
+	}
+	
+	public void SpecialFollow(Vector2 target){
+		followSpecialTarget = true;
+	}
+	
+	public void StopSpecialFollow(){
+		followSpecialTarget = false;
 	}
 }

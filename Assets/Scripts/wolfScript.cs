@@ -83,6 +83,9 @@ public class wolfScript : MonoBehaviour
 			//Vector3 mouvement = new Vector3(new Vector3(waypointsPosition[currentWaypointTargeted].x, waypointsPosition[currentWaypointTargeted].y, 0) - transform.position)));
 			//mouvement = new Vector3(mouvement.x, mouvement.y, 0);
 			transform.position += (vLouptoWP.normalized * currentSpeed * Time.deltaTime);
+			if(vLouptoWP.x > 0 && transform.localScale.x < 0 || vLouptoWP.x < 0 && transform.localScale.x > 0){
+				transform.localScale = new Vector3(transform.localScale.x * -1,transform.localScale.y,transform.localScale.z);
+			}
 			float distanceToTravelLeft = Mathf.Sqrt(Mathf.Pow((waypointsPosition[currentWaypointTargeted].x - transform.position.x), 2) + Mathf.Pow((waypointsPosition[currentWaypointTargeted].y - transform.position.y), 2));
 			if(distanceToTravelLeft <= 0.5)
 			{
