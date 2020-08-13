@@ -30002,6 +30002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TxtBtnRestart
       objectReference: {fileID: 0}
+    - target: {fileID: 4374705997221964321, guid: 65ad634dd2e849d4c89ce813588a9776,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5836693006945924805, guid: 65ad634dd2e849d4c89ce813588a9776,
         type: 3}
       propertyPath: m_RootOrder
