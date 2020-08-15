@@ -5,7 +5,7 @@ using UnityEngine;
 public class kidScript : MonoBehaviour
 {
 	//hp en pourcentage
-	float hp = 100f;
+	public float hp = 100f;
 	public bool isDed;
 	bool hasStartedplaying = false;
  
