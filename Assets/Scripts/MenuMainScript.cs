@@ -9,6 +9,8 @@ public class MenuMainScript : MenuScript
 {
     [SerializeField] protected Button btnBack;
     [SerializeField] GameObject pnlCredits;
+    [SerializeField] GameObject pnlControles;
+    //[SerializeField] protected Button btnControles;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,10 @@ public class MenuMainScript : MenuScript
     public void DisplayPanelCredits()
     {
         pnlCredits.gameObject.SetActive(!pnlCredits.gameObject.activeSelf);
+    }
+
+    public void DisplayPanelControles()
+    {
+        pnlControles.gameObject.SetActive(!pnlControles.gameObject.activeSelf);
     }
 }
