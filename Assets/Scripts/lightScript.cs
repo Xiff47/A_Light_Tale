@@ -130,8 +130,14 @@ public class lightScript : MonoBehaviour
 					if(lightToLooseToKid >= 0){ lightToLooseToKid = -lightToLooseToKid;}
 					SetLight(lightToLooseToKid);
 					if(kidDistance <= 3f){
-						kid.GetComponent<kidScript>().SetLife(lifeToGiveToKid);						
-						kidAnimator.SetBool("SeRechauffe", true);
+						kid.GetComponent<kidScript>().SetLife(lifeToGiveToKid);
+						if(kid.GetComponent<kidScript>().hp < 100){
+							print("hp < 100 --> Enfant SeRechauffe = true");
+							kidAnimator.SetBool("SeRechauffe", true);
+						}else{
+							print("hp == 100 --> Enfant NeSeRechauffePas");
+							kidAnimator.SetBool("SeRechauffe", false);
+						}									
 					}
 					if(kid.GetComponent<kidScript>().isDed){
 						kid.GetComponent<kidScript>().isDed = false;

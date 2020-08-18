@@ -438,40 +438,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2757804084444068019, guid: 65ad634dd2e849d4c89ce813588a9776,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757804084444068019, guid: 65ad634dd2e849d4c89ce813588a9776,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2757804084444068030, guid: 65ad634dd2e849d4c89ce813588a9776,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757804086176413833, guid: 65ad634dd2e849d4c89ce813588a9776,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757804086176413833, guid: 65ad634dd2e849d4c89ce813588a9776,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757804086176413833, guid: 65ad634dd2e849d4c89ce813588a9776,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757804086176413833, guid: 65ad634dd2e849d4c89ce813588a9776,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65ad634dd2e849d4c89ce813588a9776, type: 3}
