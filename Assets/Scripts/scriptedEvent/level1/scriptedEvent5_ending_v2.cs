@@ -106,17 +106,17 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 			break;
 			case 4 : //kid lights fire
 				if(!done){
-					// ???
+					// YVAN DO YOUR MAGIC
 					done = true;
 				}
-				if(false){ // when anim finished??
+				if(false){ // when anim finished YVAN DO YOUR MAGIC
 					fire.GetComponent<firePlaceScript>().LightUp();
 					stepUp();
 				}
 			break;
 			case 5 : //light dances
 				if(!done){
-					// ???
+					// YVAN DO YOUR MAGIC
 					done = true;
 				}
 				t -= Time.deltaTime;
@@ -137,6 +137,8 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 		}
 
 		// Texte apparait en fondu
+		// YVAN LET'S TALK ABOUT THIS LATER
+		// BUT WHAT HAPPENS NOW???
 		if(happened && fade && colorAlpha<254){
 			colorAlpha += 2;
 			textEndGame.color = new Color32(0, 0, 0, colorAlpha);

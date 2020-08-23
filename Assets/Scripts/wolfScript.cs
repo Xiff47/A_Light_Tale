@@ -29,6 +29,14 @@ public class wolfScript : MonoBehaviour
 	[SerializeField] float currentSpeed = 2f;
 
 	Animator wolfAnimator;
+	
+	const int NORTH = 1;
+	const int EST = 2;
+	const int SOUTH = 3;
+	const int WEST = 4;
+	float wolfSize; // Prendra la taille en X de la valeur renseignée dans l'éditeur
+	int wolfeDirection;
+	int wolfeHorizontalDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +68,9 @@ public class wolfScript : MonoBehaviour
 		
 		noMoreGoodBoiTimer = noMoreGoodBoiTimermax;
 		becomeGoodBoiTimer = becomeGoodBoiTimerMax;
+		
+		
+		wolfSize = transform.localScale.x;
 	}
 
     // Update is called once per frame
@@ -83,9 +94,48 @@ public class wolfScript : MonoBehaviour
 			//Vector3 mouvement = new Vector3(new Vector3(waypointsPosition[currentWaypointTargeted].x, waypointsPosition[currentWaypointTargeted].y, 0) - transform.position)));
 			//mouvement = new Vector3(mouvement.x, mouvement.y, 0);
 			transform.position += (vLouptoWP.normalized * currentSpeed * Time.deltaTime);
+			
+			// YVAN UTILISE CECI
+			// UNE FOIS QUE TU AS FINIS NEUTRALIZE LA PARTIE DU BAS
+			/*if(Mathf.Abs(vLouptoWP.x) > Mathf.Abs(vLouptoWP.y))
+				{
+					//Horizontal
+					if(vLouptoWP.x > 0){
+						wolfeDirection = EST;
+						wolfeHorizontalDirection = 1;
+						transform.localScale = new Vector3(wolfSize, transform.localScale.y, transform.localScale.z);
+						//YVAN DO YOUR MAGIC HERE
+					}
+					else {
+						kidDirection = WEST;
+						kidHorizontalDirection = -1;
+						transform.localScale = new Vector3(-wolfSize, transform.localScale.y, transform.localScale.z);
+						//YVAN DO YOUR MAGIC HERE				
+					}
+				}
+				else 
+				{
+					//Vertical
+					if(vLouptoWP.y > 0)
+					{
+						kidDirection = NORTH;
+						kidAnimator.SetFloat("direction", NORTH);
+						//YVAN DO YOUR MAGIC HERE
+					}
+					else
+					{
+						kidDirection = SOUTH;
+						kidAnimator.SetFloat("direction", SOUTH);
+						//YVAN DO YOUR MAGIC HERE
+					}
+				}
+				*/
+			//DESTROY THE FOLLOWING ONCE YOU'RE DONE YVAN
 			if(vLouptoWP.x > 0 && transform.localScale.x < 0 || vLouptoWP.x < 0 && transform.localScale.x > 0){
 				transform.localScale = new Vector3(transform.localScale.x * -1,transform.localScale.y,transform.localScale.z);
 			}
+			// DESTROY UNTIL HERE
+			
 			float distanceToTravelLeft = Mathf.Sqrt(Mathf.Pow((waypointsPosition[currentWaypointTargeted].x - transform.position.x), 2) + Mathf.Pow((waypointsPosition[currentWaypointTargeted].y - transform.position.y), 2));
 			if(distanceToTravelLeft <= 0.5)
 			{
