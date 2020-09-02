@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class scriptedEvent3_cascade_V2 : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 	void Start(){
 		//Riviere starts invisible
 		spriteRiviere.GetComponent<Image>().color = new Color(255,255,255, 0);
-		
-		t = timer
+
+		t = timer;
 	}
 
     // Update is called once per frame
