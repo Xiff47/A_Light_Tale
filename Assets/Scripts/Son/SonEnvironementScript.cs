@@ -6,35 +6,38 @@ public class SonEnvironementScript : MonoBehaviour
 {
 	bool isPlaying = false;
 	bool hasPlayed = false;
-    AudioSource audioSource;
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-        audioSource = gameObject.GetComponent<AudioSource>();
-    }
+	AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(isPlaying && !audioSource.isPlaying){
-			hasPlayed = true;
-		}
-    }
-	
-	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.tag=="Player" && !hasPlayed){
-			isPlaying = true;
-            audioSource.Play();
-            print("music");
-
-			//play
-		}
+	// Start is called before the first frame update
+	void Start()
+	{
+		audioSource = gameObject.GetComponent<AudioSource>();
 	}
-	//void OnTriggerExit2D(Collider2D other)
-    //{
+
+	// Update is called once per frame
+	void Update()
+	{
+
+	}
+
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Player" && !hasPlayed)
+		{
+			isPlaying = true;
+			audioSource.Play();
+			hasPlayed = true;
+			print("music");
+		}
+		//play
+
+
+		//void OnTriggerExit2D(Collider2D other)
+		//{
 		//if(other.gameObject.tag=="Kid"){
-			//stop
+		//stop
+	}
 }
 	
 
