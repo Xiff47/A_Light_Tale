@@ -148,15 +148,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8480997664881947182, guid: 42558f83371c96140a68306710b58602,
+        type: 3}
+      propertyPath: m_Name
+      value: wood
+      objectReference: {fileID: 0}
     - target: {fileID: 328670499827752923, guid: 42558f83371c96140a68306710b58602,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 117.77
+      value: 117.5
       objectReference: {fileID: 0}
     - target: {fileID: 328670499827752923, guid: 42558f83371c96140a68306710b58602,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -188.93
+      value: -188.86
       objectReference: {fileID: 0}
     - target: {fileID: 328670499827752923, guid: 42558f83371c96140a68306710b58602,
         type: 3}
@@ -206,12 +211,12 @@ PrefabInstance:
     - target: {fileID: 328670499827752923, guid: 42558f83371c96140a68306710b58602,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 328670499827752923, guid: 42558f83371c96140a68306710b58602,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2524405573969900779, guid: 42558f83371c96140a68306710b58602,
         type: 3}
@@ -264,10 +269,10 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8480997664881947182, guid: 42558f83371c96140a68306710b58602,
+    - target: {fileID: 7440747442915943268, guid: 42558f83371c96140a68306710b58602,
         type: 3}
-      propertyPath: m_Name
-      value: wood
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42558f83371c96140a68306710b58602, type: 3}
