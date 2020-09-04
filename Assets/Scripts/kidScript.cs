@@ -322,7 +322,6 @@ public class kidScript : MonoBehaviour
 			return;
 		}
 		print("bruitdepas");
-		gameObject.GetComponent<SonFootstepScript>().PlayStepSound();
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
 		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x + offsetFootstep.x, transform.position.y + offsetFootstep.y, transform.position.z + 0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
 		
@@ -331,7 +330,6 @@ public class kidScript : MonoBehaviour
 		if(!canStep){
 			return;
 		}
-		gameObject.GetComponent<SonFootstepScript>().PlayStepSound();
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
 		offsetFootstep *= -1; // Inverser l'image pour le pied gauche
 		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x+offsetFootstep.x, transform.position.y+offsetFootstep.y, transform.position.z+0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
