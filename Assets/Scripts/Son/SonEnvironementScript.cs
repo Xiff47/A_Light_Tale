@@ -29,6 +29,7 @@ public class SonEnvironementScript : MonoBehaviour
 				isPlaying = true;
 				audioSource.Play();
 				hasPlayed = true;
+				audioSource.pitch = (Random.Range(0.8f, 1.2f));
 			}
 		}
 		//play

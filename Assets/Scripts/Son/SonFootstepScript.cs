@@ -8,13 +8,16 @@ public class SonFootstepScript : MonoBehaviour
     AudioSource AudioSourceFootstep;
     public bool isIndoor;
 
-    // Start is called before the first frame update
- 
+    void Start()
+    {
+        isIndoor = false;
+    }
+
     public void PlayStepSound()
     {
         if (isIndoor)
         {
-            AudioSourceFootstep.clip = FootstepTableau[Random.Range(7, 12)];
+            AudioSourceFootstep.clip = FootstepTableau[Random.Range(4, 8)];
             AudioSourceFootstep.pitch = (Random.Range(0.6f, 1.2f));
             AudioSourceFootstep.Play();
             print("footstepIndoor");

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SonGlaceScript : MonoBehaviour
 {
     public AudioSource AudioSourceGlace;
+    bool isplaying;
 
     // Start is called before the first frame update
 
@@ -19,8 +20,16 @@ public class SonGlaceScript : MonoBehaviour
     {
         if (gameObject.GetComponent<iceScript>().meltTimer <= 0)
         {
-            AudioSourceGlace.Play();
-            print("laglacefond");
+            isplaying = false;
+            print("fond");
+            if (isplaying == false)
+            {
+                AudioSourceGlace.Play();
+                print("laglacefond");
+                isplaying = true;
+
+
+            }
         }
     }
     public void IceMelting()

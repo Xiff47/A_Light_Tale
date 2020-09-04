@@ -16,6 +16,7 @@ public class iceScript : MonoBehaviour
 	Animator iceAnimator;
 	int state = 0;
 	bool isMelting = false;
+	bool meltSound;
 	
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,9 @@ public class iceScript : MonoBehaviour
 
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y/100);
 		meltTimerMax = meltTimer;
-    }
+		gameObject.GetComponent<SonGlaceScript>();
+
+	}
 
     // Update is called once per frame
     void Update()
@@ -40,14 +43,20 @@ public class iceScript : MonoBehaviour
 					hp = hp - hpToLoose;
 					state++;
 					print("State = " + state + " // hp = " + hp + " // hpToLoose = " + hpToLoose);
-                    
-                    if (hp > 0){
+					
+
+					if (hp > 0){
 						sprite.transform.localScale = new Vector3(hp,hp,0);
 						iceAnimator.SetInteger("state", state);
 					}else{
 						Destroy(this.gameObject);
+						meltSound = true;
 					}
-                    gameObject.GetComponent<SonGlaceScript>().IceMelting(); //Sacha Place son bout de code là
+					if (meltSound == false)
+					{
+						gameObject.GetComponent<SonGlaceScript>().IceMelting();
+						meltSound = true;
+					}//Sacha Place son bout de code là
                 }
 			}else{
 				isMelting = false;

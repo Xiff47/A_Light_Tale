@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerSonEnfant : MonoBehaviour
 {
-    bool isPlaying = false;
+   
     bool hasPlayed = false;
     [SerializeField] int ValueTableau = 0;
 
@@ -21,9 +21,12 @@ public class TriggerSonEnfant : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (hasPlayed== false)
         {
+            
             other.gameObject.GetComponent<SonEnfantScript>().PlaySpecificSound(ValueTableau);
+            print("ca joue?");
+            hasPlayed = true;
         }
     }
 }
