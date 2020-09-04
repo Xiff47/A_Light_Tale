@@ -15,7 +15,7 @@ public class kidScript : MonoBehaviour
 	float lightDistance;
 	Vector2 lightDirection;
 	
-	bool followSpecialTarget = false;
+	public bool followSpecialTarget = false;
 	Vector2 specialTarget;
 	
 	[SerializeField] public bool canStep = false;
@@ -311,23 +311,17 @@ public class kidScript : MonoBehaviour
 			}
 		}
     }
-	
-	void StepRightFeet(){
-		if(!canStep){
+
+	void StepRightFeet()
+	{
+		if (!canStep)
+		{
 			return;
 		}
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
-		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x+offsetFootstep.x, transform.position.y+offsetFootstep.y, transform.position.z+0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
-        if (isIndoor )
-        {
-            gameObject.GetComponent<SonEnfantScript>().PlayStepSound();
-        }
-        else
-        {
-            gameObject.GetComponent<SonEnfantScript>().PlayStepSound();
-        }
-    }
-
+		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x + offsetFootstep.x, transform.position.y + offsetFootstep.y, transform.position.z + 0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
+		gameObject.GetComponent<SonFootstepScript>().PlayStepSound();
+	}
 	void StepLeftFeet(){
 		if(!canStep){
 			return;
@@ -335,6 +329,7 @@ public class kidScript : MonoBehaviour
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
 		offsetFootstep *= -1; // Inverser l'image pour le pied gauche
 		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x+offsetFootstep.x, transform.position.y+offsetFootstep.y, transform.position.z+0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
+		gameObject.GetComponent<SonFootstepScript>().PlayStepSound();
 	}
 
 	void Standing(){
@@ -372,6 +367,7 @@ public class kidScript : MonoBehaviour
 	}
 
 	public void GetLost(){
+		if (followSpecialTarget) { return; }
 		isLost = true;
 		isCold = true;
 		isWalking = false;
@@ -385,6 +381,10 @@ public class kidScript : MonoBehaviour
 	}
 	
 	public void FallDown(string fallReason = "speed"){
+		if (followSpecialTarget)
+		{
+			return;
+		}
 		if(fallReason != "speed"){
 			if(fallReason == "wolf"){
 				print("Je tombes à cause d'un loup !");
@@ -551,7 +551,9 @@ public class kidScript : MonoBehaviour
 	}
 	
 	public void SpecialFollow(Vector2 target){
+		specialTarget = target;
 		followSpecialTarget = true;
+		print("i start follow");
 	}
 	
 	public void StopSpecialFollow(){

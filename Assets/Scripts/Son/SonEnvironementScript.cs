@@ -23,12 +23,13 @@ public class SonEnvironementScript : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Player" && !hasPlayed)
-		{
-			isPlaying = true;
-			audioSource.Play();
-			hasPlayed = true;
-			print("music");
+		if (other.gameObject.tag == "Player" )
+		{	if (hasPlayed==false)
+			{
+				isPlaying = true;
+				audioSource.Play();
+				hasPlayed = true;
+			}
 		}
 		//play
 

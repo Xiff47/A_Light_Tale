@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scriptedEvent5_ending_V2 : MonoBehaviour
+public class scriptedEvent5_ending_v2 : MonoBehaviour
 {
     [SerializeField] GameObject mainCamera;
 	[SerializeField] GameObject light;
@@ -62,24 +62,23 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 		if(!start || (happened && !fade)){
 			return;
 		}
-		
-		switch(step){
+		switch (step){
 			case 0 : // kid goes to fireplace
 				if(!done){
 					kid.GetComponent<kidScript>().SpecialFollow(kidPositionNearFire.transform.position);
-					light.GetComponent<kidScript>().SpecialFollow(lightDestination.transform.position);
+					light.GetComponent<lightScript>().SpecialFollow(lightDestination.transform.position);
 					light.GetComponent<lightScript>().toggleActive();
 					light.GetComponent<lightScript>().acceptGivre = false;
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 0.2){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 4){
 					stepUp();
 				}
 			break;
 			case 1 : // kid studies fireplace
 				t -= Time.deltaTime;
 				if(t<=0){
-					timer = 5;
+					timer = 2;
 					t = timer;
 					stepUp();
 				}
@@ -89,22 +88,33 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 					kid.GetComponent<kidScript>().SpecialFollow(wood.transform.position);
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - wood.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - wood.transform.position.y),2)) <= 0.2){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - wood.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - wood.transform.position.y),2)) <= 1){
 					kid.GetComponent<kidScript>().CheckItem();
 					stepUp();
+					t = 1.5f;
 				}
 			break;
-			case 3 : //kid returns to fire and depose wood
+			case 3:
+				t -= Time.deltaTime;
+
+				if (t <= 0)
+				{
+					timer = 2;
+					t = timer;
+					stepUp();
+				}
+				break;
+			case 4 : //kid returns to fire and depose wood
 				if(!done){
 					kid.GetComponent<kidScript>().SpecialFollow(kidPositionNearFire.transform.position);
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 0.2){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 4){
 					kid.GetComponent<kidScript>().CheckItem();
 					stepUp();
 				}
 			break;
-			case 4 : //kid lights fire
+			case 5 : //kid lights fire
 				if(!done){
 					// YVAN DO YOUR MAGIC
 					done = true;
@@ -114,7 +124,7 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 					stepUp();
 				}
 			break;
-			case 5 : //light dances
+			case 6 : //light dances
 				if(!done){
 					// YVAN DO YOUR MAGIC
 					done = true;
@@ -126,7 +136,7 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 					stepUp();
 				}
 			break;
-			case 6 : //white screen
+			case 7 : //white screen
 				float visibility2 = t/timer;
 				canvas.transform.GetChild(0).GetComponent<Image>().color = new Color(255,255,255, visibility2);
 				t -= Time.deltaTime;
@@ -149,14 +159,13 @@ public class scriptedEvent5_ending_V2 : MonoBehaviour
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.tag == "Player"){
+		if(other.CompareTag("Kid"))
+		{
+			print("go ending");
 			start = true;
 		}
 	}
 	
-	public void activate(){
-		start = true;
-	}
 	
 	void stepUp(){
 		step += 1;
