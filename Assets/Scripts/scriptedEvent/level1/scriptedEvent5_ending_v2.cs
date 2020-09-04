@@ -27,10 +27,14 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 	bool done = false;
 	
 	float targetDistance;
+
+	Animator kidAnimator;
 	
     // Start is called before the first frame update
     void Start()
     {
+		kidAnimator = kid.GetComponent<kidScript>().GetComponent<Animator>();
+
 		t = timer;
 		colorAlpha = 0;
 		textEndGame.color = new Color32(0, 0, 0, colorAlpha);
@@ -117,6 +121,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 			case 5 : //kid lights fire
 				if(!done){
 					// YVAN DO YOUR MAGIC
+					kidAnimator.SetTrigger("AllumeFeu"); // Animatin de l'enfant qui allume le feu
 					done = true;
 				}
 				if(false){ // when anim finished YVAN DO YOUR MAGIC
