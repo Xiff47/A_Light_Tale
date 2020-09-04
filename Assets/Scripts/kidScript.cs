@@ -311,16 +311,17 @@ public class kidScript : MonoBehaviour
 			}
 		}
     }
-	
-	void StepRightFeet(){
-		if(!canStep){
+
+	void StepRightFeet()
+	{
+		if (!canStep)
+		{
 			return;
 		}
-		offsetFootstep = new Vector2(of
-    }fsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
-		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x+offsetFootstep.x, transform.position.y+offsetFootstep.y, transform.position.z+0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
-        gameObject.GetComponent<SonFootstepScript>().PlayStepSound();       
-
+		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
+		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x + offsetFootstep.x, transform.position.y + offsetFootstep.y, transform.position.z + 0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
+		gameObject.GetComponent<SonFootstepScript>().PlayStepSound();
+	}
 	void StepLeftFeet(){
 		if(!canStep){
 			return;
@@ -328,6 +329,7 @@ public class kidScript : MonoBehaviour
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
 		offsetFootstep *= -1; // Inverser l'image pour le pied gauche
 		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x+offsetFootstep.x, transform.position.y+offsetFootstep.y, transform.position.z+0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
+		gameObject.GetComponent<SonFootstepScript>().PlayStepSound();
 	}
 
 	void Standing(){
