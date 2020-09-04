@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 762462050955046385}
   - component: {fileID: 762462050955046384}
   m_Layer: 0
-  m_Name: Environement
+  m_Name: PrefabSon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,10 +70,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b41795ca13d16124b97439c31cd1c075, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

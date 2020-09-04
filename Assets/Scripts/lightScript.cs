@@ -8,7 +8,9 @@ public class lightScript : MonoBehaviour
 	
 	bool lightStart;
 	bool active = true;
-	
+	bool followSpecialTarget = false;
+	Vector2 specialTarget;
+
 	float light = 100f;
 	public Vector3 spawnPosition;
 	[SerializeField] GameObject spawnDebutDeNiveau;
@@ -79,10 +81,17 @@ public class lightScript : MonoBehaviour
 		}
 		
 		transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y/100);
-		
-		
+
+
 		//distance entre light et mouse;
-		mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		if (!followSpecialTarget)
+		{
+			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		}
+		else
+		{
+			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		}
 		mousePosition = new Vector3(mousePosition.x,mousePosition.y, transform.position.z);
 		mouseDistance = Mathf.Sqrt(Mathf.Pow((mousePosition.x - transform.position.x),2)+Mathf.Pow((mousePosition.y - transform.position.y),2));
 		if(mouseDistance >= distanceMaxMoving){
@@ -285,5 +294,16 @@ public class lightScript : MonoBehaviour
 		// Mise à jour de l'affichage du givre
 		gelAnimator.SetFloat("state", actualGivreStep);
 
+	}
+
+	public void SpecialFollow(Vector2 target)
+	{
+		followSpecialTarget = true;
+		specialTarget = target;
+	}
+
+	public void StopSpecialFollow()
+	{
+		followSpecialTarget = false;
 	}
 }

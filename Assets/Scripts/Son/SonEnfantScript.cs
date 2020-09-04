@@ -6,21 +6,32 @@ public class SonEnfantScript : MonoBehaviour
 {
     public AudioClip[] EnfantTableau;
     AudioSource AudioSourceEnfant;
-    public bool isIndoor;
+    
+    public bool isPlayingBetter;
 
     // Start is called before the first frame update
     void Start()
     {
         AudioSourceEnfant = gameObject.GetComponent<AudioSource>();
-       // kidScript = GetComponent<kidScript>;
+        // kidScript = GetComponent<kidScript>;
+        isPlayingBetter = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+
 
     }
+    public void PlaySpecificSound(int ValueTableau)
+    {
+        AudioSourceEnfant.clip = EnfantTableau[ValueTableau];
+        AudioSourceEnfant.volume = 1f;
+        AudioSourceEnfant.Play();
+        isPlayingBetter = true;
+
+    }
+
     public void PlayFallDownTreeSound()
     {
         AudioSourceEnfant.clip = EnfantTableau[0];
@@ -46,25 +57,6 @@ public class SonEnfantScript : MonoBehaviour
             AudioSourceEnfant.Play();
             
     }
-    public void PlayStepSound()
-    {
-        if(isIndoor)
-            {
-            AudioSourceEnfant.clip = EnfantTableau[Random.Range(7, 12)];
-            AudioSourceEnfant.pitch = (Random.Range(0.6f, 1.2f));
-            AudioSourceEnfant.Play();
-            print("footstepIndoor");
-            
-            }
-        else
-        {
-            {
-                AudioSourceEnfant.clip = EnfantTableau[Random.Range(3, 6)];
-                AudioSourceEnfant.Play();
-                AudioSourceEnfant.pitch = (Random.Range(0.6f, 1.2f));
-                print("footstepOutdoor");
-            }
-        }
-    }
+   
 
 }
