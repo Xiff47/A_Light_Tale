@@ -14,10 +14,10 @@ public class boussoleScript : MonoBehaviour
     GameObject light;
     GameObject kid;
 	bool isVisible;
-	int visibleState = 0;
+	public int visibleState = 0;
 	float t = 0;
 	float timer = 1f;
-	float visibility = 0;
+	public float visibility = 0;
 	bool started = false;
 	
     void Start()
@@ -53,8 +53,16 @@ public class boussoleScript : MonoBehaviour
 				case 1 :
 					visibility = (t/timer);
 					transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255,255,255, visibility);
-					if(!isVisible && t>0){
+					if(!isVisible && t>=0){
 						t -= Time.deltaTime;
+						if (t <= 0)
+						{
+							visibleState = 0;
+							t = 0;
+							timer = 1f;
+							visibility = 0;
+							started = false;
+						}
 					}else{
 						t += Time.deltaTime;
 					}

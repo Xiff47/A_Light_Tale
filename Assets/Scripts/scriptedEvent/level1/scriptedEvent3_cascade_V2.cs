@@ -8,6 +8,7 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 	
 	[SerializeField] GameObject iceToMelt;
 	[SerializeField] GameObject spriteRiviere;
+	[SerializeField] GameObject tronc;
 	[SerializeField] GameObject invisibleWallToErase;
 	
 	GameObject target;
@@ -21,6 +22,7 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 	void Start(){
 		//Riviere starts invisible
 		spriteRiviere.GetComponent<Image>().color = new Color(255,255,255, 0);
+		tronc.GetComponent<Image>().color = new Color(255,255,255, 0);
 
 		t = timer;
 	}
@@ -32,7 +34,7 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 			activate();
 		}
 		
-        if(!start){
+        if(!start || done){
 			return;
 		}
 		
@@ -45,7 +47,7 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 		}
 		if(t <= 0){
 			Destroy(invisibleWallToErase);
-			//Changer le set du tronc ICI
+			tronc.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 			done = true;
 		}
     }

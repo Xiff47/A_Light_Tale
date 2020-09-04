@@ -24,6 +24,9 @@ public class DirectionManagerScript : MonoBehaviour
 			child.gameObject.SetActive(false);
 		}
 		toggleOn = false;
+
+		light = transform.parent.gameObject;
+		kid = light.GetComponent<lightScript>().kid;
     }
 
     void Update()
