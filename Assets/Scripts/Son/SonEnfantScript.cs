@@ -45,37 +45,40 @@ public class SonEnfantScript : MonoBehaviour
     {
         AudioSourceEnfant.clip = EnfantTableau[0];
         AudioSourceEnfant.Play();
-        
+        AudioSourceEnfant.volume = 1f;
+
     }
     public void PlayScreamSound()
     {
+        AudioSourceEnfant.volume = 1f;
         AudioSourceEnfant.clip = EnfantTableau[11];
         AudioSourceEnfant.Play();
 
     }
     public void PlayFallDownSound()
     {
+        AudioSourceEnfant.volume = 1f;
         AudioSourceEnfant.clip = EnfantTableau[12];
         AudioSourceEnfant.Play();
 
     }
     public void PlayHealSound()
     {
-        
+            AudioSourceEnfant.volume = 1f;
             AudioSourceEnfant.clip = EnfantTableau[1];
             AudioSourceEnfant.Play();
             
     }
     public void PlayWoodSound()
     {
-
+        AudioSourceEnfant.volume = 1f;
         AudioSourceEnfant.clip = EnfantTableau[21];
         AudioSourceEnfant.Play();
 
     }
     public void PlayWoodSound2()
     {
-
+        AudioSourceEnfant.volume = 1f;
         AudioSourceEnfant.clip = EnfantTableau[23];
         AudioSourceEnfant.Play();
 
@@ -83,9 +86,27 @@ public class SonEnfantScript : MonoBehaviour
 
     public void PlayFarSound()
     {
-
+        AudioSourceEnfant.volume = 1f;
         AudioSourceEnfant.clip = EnfantTableau[22];
         AudioSourceEnfant.Play();
+        
+
+    }
+    public void PlayColdSound()
+    {
+        AudioSourceEnfant.volume = 1f;
+        AudioSourceEnfant.clip = EnfantTableau[15];
+        AudioSourceEnfant.Play();
+        
+
+    }
+    public void PlayHotSound()
+    {
+
+        AudioSourceEnfant.clip = EnfantTableau[17];
+        AudioSourceEnfant.Play();
+        AudioSourceEnfant.volume = 0.1f;
+
 
     }
 

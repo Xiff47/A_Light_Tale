@@ -168,7 +168,7 @@ public class kidScript : MonoBehaviour
 						isCold = true;
 					}
 				}else if(isFollowing && !isCarryingItem){
-					//lumière éloignée
+					//lumière éloignée 
 					currentSpeed = RUNNINGSPEED;
 					isWalking = false;
 					isJogging = false;
@@ -317,6 +317,7 @@ public class kidScript : MonoBehaviour
 
 	void StepRightFeet()
 	{
+		transform.GetChild(0).GetComponent<SonFootstepScript>().PlayStepSound();
 		if (!canStep)
 		{
 			return;
@@ -326,8 +327,10 @@ public class kidScript : MonoBehaviour
 		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x + offsetFootstep.x, transform.position.y + offsetFootstep.y, transform.position.z + 0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
 		
 	}
-	void StepLeftFeet(){
-		if(!canStep){
+	void StepLeftFeet()
+	{
+		transform.GetChild(0).GetComponent<SonFootstepScript>().PlayStepSound();
+		if (!canStep){
 			return;
 		}
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
@@ -466,6 +469,14 @@ public class kidScript : MonoBehaviour
         {
             gameObject.GetComponent<SonEnfantScript>().PlayHealSound();
         }
+		if(hp < 80 && (hp+hpPercentage) >= 80)
+		{
+			gameObject.GetComponent<SonEnfantScript>().PlayHotSound();//play relief 
+		}
+		if(hp > 20 && (hp + hpPercentage) <= 20)
+		{
+			gameObject.GetComponent<SonEnfantScript>().PlayColdSound();//play worries
+		}
         hp += hpPercentage;
 		//kidAnimator.SetBool("SeRechauffe", true);
 		if(hp>100){

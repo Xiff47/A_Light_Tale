@@ -56,7 +56,7 @@ public class iceScript : MonoBehaviour
 					{
 						gameObject.GetComponent<SonGlaceScript>().IceMelting();
 						meltSound = true;
-					}//Sacha Place son bout de code là
+					}
                 }
 			}else{
 				isMelting = false;

@@ -267,7 +267,6 @@ public class lightScript : MonoBehaviour
 			if(timerNextGivreStep <= 0){
 				timerNextGivreStep = timerNextGivreStepMax + actualGivreStep * 1.3f ;
 				actualGivreStep++;
-				print("Givre state : "+actualGivreStep);
 				if(actualGivreStep > givreStepMax){
 					Die();
 					if(actualGivreStep > givreStepMax+1){

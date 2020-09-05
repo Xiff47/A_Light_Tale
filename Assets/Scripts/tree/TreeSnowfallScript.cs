@@ -7,6 +7,7 @@ public class TreeSnowfallScript : MonoBehaviour
     bool isFalling = false;
     bool hasFell = false;
     float fallTimer = 3;
+   
 
     bool isKidInside = false;
 
@@ -42,6 +43,7 @@ public class TreeSnowfallScript : MonoBehaviour
             }
         }
     }
+ 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
