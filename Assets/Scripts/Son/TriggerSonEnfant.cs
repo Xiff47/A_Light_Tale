@@ -21,12 +21,9 @@ public class TriggerSonEnfant : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (hasPlayed== false)
+        if (other.gameObject.tag == "Kid")
         {
-            
             other.gameObject.GetComponent<SonEnfantScript>().PlaySpecificSound(ValueTableau);
-            print("ca joue?");
-            hasPlayed = true;
         }
     }
 }

@@ -70,6 +70,7 @@ public class kidScript : MonoBehaviour
 	[SerializeField] float fallBackDamage = 1;
 	
 	public bool isInBlizzard = false;
+	public bool isInWater = false;
 	
 	float timerFallTest;
 	
@@ -322,7 +323,6 @@ public class kidScript : MonoBehaviour
 		{
 			return;
 		}
-		print("bruitdepas");
 		offsetFootstep = new Vector2(offsetFootstepSetup.x * lightDirection.y, offsetFootstepSetup.y * lightDirection.x);
 		GameObject newFootstep = (GameObject)Instantiate(footStep, new Vector3(transform.position.x + offsetFootstep.x, transform.position.y + offsetFootstep.y, transform.position.z + 0.1f), Quaternion.Euler(new Vector3(lightDirection.x, lightDirection.y, 0)));
 		
@@ -441,6 +441,10 @@ public class kidScript : MonoBehaviour
 	}
 	
 	void FallTest(){
+		if (followSpecialTarget)
+		{
+			return;
+		}
 		timerFallTest = 1f;
 		if(isJogging){
 			fallTest = Random.Range(1, 31);
@@ -572,10 +576,11 @@ public class kidScript : MonoBehaviour
 	public void SpecialFollow(Vector2 target){
 		specialTarget = target;
 		followSpecialTarget = true;
-		print("i start follow");
+		closeDistanceStop = 1f;
 	}
 	
 	public void StopSpecialFollow(){
 		followSpecialTarget = false;
+		closeDistanceStop = 2;
 	}
 }

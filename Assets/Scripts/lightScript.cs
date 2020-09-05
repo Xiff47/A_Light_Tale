@@ -90,7 +90,7 @@ public class lightScript : MonoBehaviour
 		}
 		else
 		{
-			mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			mousePosition = specialTarget;
 		}
 		mousePosition = new Vector3(mousePosition.x,mousePosition.y, transform.position.z);
 		mouseDistance = Mathf.Sqrt(Mathf.Pow((mousePosition.x - transform.position.x),2)+Mathf.Pow((mousePosition.y - transform.position.y),2));

@@ -37,7 +37,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 
 		t = timer;
 		colorAlpha = 0;
-		textEndGame.color = new Color32(0, 0, 0, colorAlpha);
+		//textEndGame.color = new Color32(0, 0, 0, colorAlpha); CA PLANTE
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 					light.GetComponent<lightScript>().acceptGivre = false;
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 4){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 1.5){
 					stepUp();
 				}
 			break;

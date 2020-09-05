@@ -21,8 +21,8 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 	
 	void Start(){
 		//Riviere starts invisible
-		spriteRiviere.GetComponent<Image>().color = new Color(255,255,255, 0);
-		tronc.GetComponent<Image>().color = new Color(255,255,255, 0);
+		spriteRiviere.GetComponent<SpriteRenderer>().color = new Color(255,255,255, 0);
+		tronc.GetComponent<SpriteRenderer>().color = new Color(255,255,255, 0);
 
 		t = timer;
 	}
@@ -42,12 +42,12 @@ public class scriptedEvent3_cascade_V2 : MonoBehaviour
 		
 		if(!done){
 			t -= Time.deltaTime;
-			float visibility = (t/timer);
-			spriteRiviere.GetComponent<Image>().color = new Color(255,255,255, visibility);
+			float visibility = 1-(t/timer);
+			spriteRiviere.GetComponent<SpriteRenderer>().color = new Color(255,255,255, visibility);
 		}
 		if(t <= 0){
 			Destroy(invisibleWallToErase);
-			tronc.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+			tronc.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
 			done = true;
 		}
     }
