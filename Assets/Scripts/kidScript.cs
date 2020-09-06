@@ -44,7 +44,7 @@ public class kidScript : MonoBehaviour
 	int kidDirection;
 	int kidHorizontalDirection;
 	
-	[SerializeField] float closeDistanceStop = 2f;
+	[SerializeField] public float closeDistanceStop = 2f;
 	[SerializeField] float CLOSEDISTANCE = 4f;
 	[SerializeField] float MEDIUMDISTANCE = 8f;
 	[SerializeField] float FARDISTANCE = 12f;
@@ -128,6 +128,8 @@ public class kidScript : MonoBehaviour
 			lightPosition = light.transform.position;
 		}else{
 			lightPosition = specialTarget;
+			/*gameObject.GetComponent<kidSpecialFollow>().activate(specialTarget);
+			return;*/
 		}
 		lightDistance = Mathf.Sqrt(Mathf.Pow((lightPosition.x - transform.position.x),2)+Mathf.Pow((lightPosition.y - transform.position.y),2));
 		lightDirection = (lightPosition - transform.position).normalized;
@@ -220,7 +222,7 @@ public class kidScript : MonoBehaviour
 				}
 				
 				
-			}else if(isFollowing){
+			}else if(isFollowing && !followSpecialTarget){
 				//l'enfant est très loin
 				GetLost();
 				timerFallTest = 1f;
@@ -240,7 +242,7 @@ public class kidScript : MonoBehaviour
 					kidAnimator.SetFloat("vitesse", 0);
 					//Kid arrete de bouger s'il est trop proche
 				}
-				if(isJogging || isRunning){
+				if(isJogging || isRunning && !followSpecialTarget){
 					// gestion de la chute de l'enfant
 					timerFallTest -= Time.deltaTime;
 					if(timerFallTest <= 0){

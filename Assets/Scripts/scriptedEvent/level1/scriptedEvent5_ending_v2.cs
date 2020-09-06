@@ -29,11 +29,16 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 	float targetDistance;
 
 	Animator kidAnimator;
+	Animator m_Animator;
+    string m_ClipName;
+    AnimatorClipInfo[] m_CurrentClipInfo;
+	
+	
 	
     // Start is called before the first frame update
     void Start()
     {
-		kidAnimator = kid.GetComponent<kidScript>().GetComponent<Animator>();
+		kidAnimator = kid.GetComponent<Animator>();
 
 		t = timer;
 		colorAlpha = 0;
@@ -62,10 +67,20 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 			launch 5sec timer
 			Once timer done: making screen white & finish game
 		*/
-	
+		
 		if(!start || (happened && !fade)){
 			return;
 		}
+		
+		//Get them_Animator, which you attach to the GameObject you intend to animate.
+        m_Animator = kidAnimator;
+        //Fetch the current Animation clip information for the base layer
+        m_CurrentClipInfo = m_Animator.GetCurrentAnimatorClipInfo(0);
+        //Access the Animation clip name
+        m_ClipName = m_CurrentClipInfo[0].clip.name;
+		
+		print(m_ClipName);
+		
 		switch (step){
 			case 0 : // kid goes to fireplace
 				if(!done){
@@ -75,7 +90,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 					light.GetComponent<lightScript>().acceptGivre = false;
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 1.5){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= kid.GetComponent<kidScript>().closeDistanceStop){
 					stepUp();
 				}
 			break;
@@ -92,7 +107,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 					kid.GetComponent<kidScript>().SpecialFollow(wood.transform.position);
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - wood.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - wood.transform.position.y),2)) <= 1){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - wood.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - wood.transform.position.y),2)) <= kid.GetComponent<kidScript>().closeDistanceStop){
 					kid.GetComponent<kidScript>().CheckItem();
 					stepUp();
 					t = 1.5f;
@@ -113,7 +128,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 					kid.GetComponent<kidScript>().SpecialFollow(kidPositionNearFire.transform.position);
 					done = true;
 				}
-				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= 4){
+				if(Mathf.Sqrt(Mathf.Pow((kid.transform.position.x - kidPositionNearFire.transform.position.x),2)+Mathf.Pow((kid.transform.position.y - kidPositionNearFire.transform.position.y),2)) <= kid.GetComponent<kidScript>().closeDistanceStop){
 					kid.GetComponent<kidScript>().CheckItem();
 					stepUp();
 				}
@@ -124,16 +139,14 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 					kidAnimator.SetTrigger("AllumeFeu"); // Animatin de l'enfant qui allume le feu
 					done = true;
 				}
-				if(false){ // when anim finished YVAN DO YOUR MAGIC
+				if(m_ClipName == "EnfantIdleDosAnim"){ // when anim finished YVAN DO YOUR MAGIC
 					fire.GetComponent<firePlaceScript>().LightUp();
+					print("fire lit up");
 					stepUp();
+					t = 3;
 				}
 			break;
-			case 6 : //light dances
-				if(!done){
-					// YVAN DO YOUR MAGIC
-					done = true;
-				}
+			case 6 :
 				t -= Time.deltaTime;
 				if(t<=0){
 					timer = 5;
@@ -143,7 +156,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 			break;
 			case 7 : //white screen
 				float visibility2 = t/timer;
-				canvas.transform.GetChild(0).GetComponent<Image>().color = new Color(255,255,255, visibility2);
+				canvas.transform.GetChild(0).GetComponent<Image>().color = new Color(255,255,255, 1-visibility2);
 				t -= Time.deltaTime;
 				if(t<=0){
 					happened = true;
