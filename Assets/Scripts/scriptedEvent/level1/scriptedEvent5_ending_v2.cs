@@ -15,7 +15,7 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 	[SerializeField] GameObject lightDestination;
 	[SerializeField] public float timer = 3;
 	[SerializeField] Text textEndGame;
-	byte colorAlpha;
+	[SerializeField] GameObject creditsScreen;
 	
 	bool start = false;
 	bool happened = false;
@@ -41,8 +41,8 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 		kidAnimator = kid.GetComponent<Animator>();
 
 		t = timer;
-		colorAlpha = 0;
-		//textEndGame.color = new Color32(0, 0, 0, colorAlpha); CA PLANTE
+		textEndGame.color = new Color(100f/255f,91f/255f,246f/255f, 0.0f);
+		creditsScreen.GetComponent<Image>().color = new Color(1,1,1, 0);
     }
 
     // Update is called once per frame
@@ -154,25 +154,38 @@ public class scriptedEvent5_ending_v2 : MonoBehaviour
 					stepUp();
 				}
 			break;
-			case 7 : //white screen
+			case 7 : //white screen + end game text
 				float visibility2 = t/timer;
 				canvas.transform.GetChild(0).GetComponent<Image>().color = new Color(255,255,255, 1-visibility2);
+				textEndGame.color = new Color(100f/255f,91f/255f,246f/255f, 1-visibility2);
+				t -= Time.deltaTime;	
+				if(t<=0){
+					//happened = true;
+					timer = 3;
+					t = timer;
+					stepUp();
+				}
+			break;
+			case 8 : // end game text disappear
+				float visibility3 = t/timer;
+				print("visibility3 = " + visibility3);
+				textEndGame.color = new Color(100f/255f,91f/255f,246f/255f, visibility3);
 				t -= Time.deltaTime;
+				if(t<=0){
+					timer = 4;
+					t = timer;
+					stepUp();
+				}
+			break;
+			case 9 : // credits panel 
+				float visibility4 = t/timer;
+
+				creditsScreen.GetComponent<Image>().color = new Color(1,1,1, 1-visibility4);
+				t -= Time.deltaTime;	
 				if(t<=0){
 					happened = true;
 				}
 			break;
-		}
-
-		// Texte apparait en fondu
-		// YVAN LET'S TALK ABOUT THIS LATER
-		// BUT WHAT HAPPENS NOW???
-		if(happened && fade && colorAlpha<254){
-			colorAlpha += 2;
-			textEndGame.color = new Color32(0, 0, 0, colorAlpha);
-			textEndGame.gameObject.SetActive(true);
-		}else{
-			fade = false;
 		}
 	}
 	
