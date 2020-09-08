@@ -54,6 +54,7 @@ public class lightScript : MonoBehaviour
 	float timerNextGivreStepMax;
 	int actualGivreStep = 0;
 	int givreStepMax = 5;
+	float startGivreTimer = 2f;
 	
     // Start is called before the first frame update
     void Start()
@@ -263,6 +264,14 @@ public class lightScript : MonoBehaviour
 	
 	public void setGivreTimer(bool startingGivre){
 		if(startingGivre){
+			if(actualGivreStep == 0){
+				startGivreTimer -= Time.deltaTime;
+				if(startGivreTimer > 0){
+					return;
+				}
+			}else if(startGivreTimer != 0){
+				startGivreTimer = 2f;
+			}
 			timerNextGivreStep -= Time.deltaTime;
 			if(timerNextGivreStep <= 0){
 				timerNextGivreStep = timerNextGivreStepMax + actualGivreStep * 1.3f ;
@@ -284,10 +293,11 @@ public class lightScript : MonoBehaviour
 				//restore vision
 				timerNextGivreStep -= Time.deltaTime;
 				if(timerNextGivreStep <= 0){
-					print("Givre state : "+actualGivreStep);
 					timerNextGivreStep = 0.2f;
 					actualGivreStep--;
 				}
+				
+			}
 			}
 		}
 		// Mise à jour de l'affichage du givre
