@@ -296,10 +296,9 @@ public class lightScript : MonoBehaviour
 					timerNextGivreStep = 0.2f;
 					actualGivreStep--;
 				}
-				
-			}
 			}
 		}
+		
 		// Mise à jour de l'affichage du givre
 		gelAnimator.SetFloat("state", actualGivreStep);
 
